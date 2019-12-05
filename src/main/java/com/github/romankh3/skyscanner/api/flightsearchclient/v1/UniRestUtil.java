@@ -10,7 +10,6 @@ import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
 import kong.unirest.UnirestException;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpStatus;
 
 /**
@@ -35,8 +34,8 @@ final class UniRestUtil {
     private static ObjectMapper objectMapper = new ObjectMapper();
 
 
-    public static HttpResponse<JsonNode> get(String xRapidApiKey, String path) {
-        HttpResponse<JsonNode> response = null;
+    static HttpResponse<JsonNode> get(String xRapidApiKey, String path) {
+        HttpResponse<JsonNode> response;
         try {
             response = Unirest.get("https://" + HOST + path)
                     .header("x-rapidapi-host", HOST)
