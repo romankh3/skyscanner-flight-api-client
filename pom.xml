@@ -6,7 +6,7 @@
 
     <groupId>com.github.romankh3</groupId>
     <artifactId>skyscanner-flight-api-client</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
 
     <properties>
         <jackson.core.version>2.10.0</jackson.core.version>
@@ -62,5 +62,13 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>bintray-repo-maven-example</id>
+            <url>https://api.bintray.com/maven/romankh3/maven/skyscanner-flight-search-api-client/;publish=1</url>
+        </repository>
+    </distributionManagement>
+
 
 </project>
