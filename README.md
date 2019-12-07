@@ -1,4 +1,4 @@
-# skyscanner-flight-search-api-client
+# skyscanner-flight-api-client
 
 ## Description
 This is client for Skyscanner [Flight Search API](https://english.api.rakuten.net/skyscanner/api/skyscanner-flight-search/) hosted in Rapid Api
