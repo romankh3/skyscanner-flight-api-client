@@ -3,9 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
     <groupId>com.github.romankh3</groupId>
     <artifactId>skyscanner-flight-api-client</artifactId>
-    <version>0.1</version>
+    <version>0.1.1</version>
     <name>Skyscanner Flight API client</name>
     <description>Client for Skyscanner Flight Search API hosted in Rapid Api</description>
     <packaging>jar</packaging>
@@ -16,6 +22,22 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
+
+    <url>https://github.com/romankh3/skyscanner-flight-api-client</url>
+
+    <scm>
+        <connection>scm:git:https://github.com/romankh3/skyscanner-flight-api-client</connection>
+        <developerConnection>scm:git:git@github.com:romankh3/skyscanner-flight-api-client.git</developerConnection>
+        <url>https://github.com/romankh3/skyscanner-flight-api-client</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>romankh3</id>
+            <name>Roman Beskrovnyi</name>
+            <email>roman.beskrovnyy@gmail.com</email>
+        </developer>
+    </developers>
 
     <properties>
         <jackson.core.version>2.10.0</jackson.core.version>
