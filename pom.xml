@@ -11,7 +11,7 @@
 
     <groupId>com.github.romankh3</groupId>
     <artifactId>skyscanner-flight-api-client</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <name>Skyscanner Flight API client</name>
     <description>Client for Skyscanner Flight Search API hosted in Rapid Api</description>
     <packaging>jar</packaging>
@@ -45,7 +45,7 @@
         <unirest.version>3.2.00</unirest.version>
         <bintray.subject>romankh3</bintray.subject>
         <bintray.repo>maven</bintray.repo>
-        <bintray.package>skyscanner-flight-api-client</bintray.package>
+        <bintray.package>skyscanner-flight-api-client-bintray</bintray.package>
     </properties>
 
     <dependencies>
