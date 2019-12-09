@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.romankh3</groupId>
     <artifactId>skyscanner-flight-api-client</artifactId>
-    <version>0.1.4</version>
+    <version>0.1.8</version>
     <name>Skyscanner Flight API client</name>
     <description>Client for Skyscanner Flight Search API hosted in Rapid Api</description>
 
@@ -78,6 +78,20 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>

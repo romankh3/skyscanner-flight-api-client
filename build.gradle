@@ -2,7 +2,6 @@ plugins {
     id 'jacoco'
     id 'java'
     id 'application'
-    id 'com.github.kt3k.coveralls' version '2.6.3'
     id 'maven'
     id "com.jfrog.bintray" version "1.8.4"
     id 'io.freefair.lombok' version '3.8.4'
@@ -11,19 +10,18 @@ plugins {
 mainClassName = "com.github.romankh3.skyscannerflightapiclient.v1.UniRestUtil"
 
 group 'com.github.romankh3'
-version '0.1.5'
+version '0.1.8'
 description 'Client for Skyscanner Flight Search API hosted in Rapid Api'
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 dependencies {
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.10.0'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.10.0'
-    compile 'org.projectlombok:lombok:1.18.10'
+    runtime 'org.projectlombok:lombok:1.18.10'
     compile 'com.konghq:unirest-java:3.2.00'
 
     testCompile 'junit:junit:4.12'
@@ -33,9 +31,9 @@ dependencies {
 jar {
     manifest {
         attributes 'Main-Class': mainClassName,
-                "Implementation-Title": "image-comparison",
+                "Implementation-Title": "skyscanner-flight-api-client",
                 "Implementation-Version": version,
-                "Automatic-Module-Name": 'com.github.romankh3.image.comparison'
+                "Automatic-Module-Name": 'com.github.romankh3.skyscannerflightapiclient.v1'
     }
 }
 
