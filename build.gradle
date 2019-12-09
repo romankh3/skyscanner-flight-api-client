@@ -1,0 +1,125 @@
+plugins {
+    id 'jacoco'
+    id 'java'
+    id 'application'
+    id 'maven'
+    id "com.jfrog.bintray" version "1.8.4"
+    id 'io.freefair.lombok' version '3.8.4'
+}
+
+mainClassName = "com.github.romankh3.skyscannerflightapiclient.v1.UniRestUtil"
+
+group 'com.github.romankh3'
+version '0.1.8'
+description 'Client for Skyscanner Flight Search API hosted in Rapid Api'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.10.0'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.10.0'
+    runtime 'org.projectlombok:lombok:1.18.10'
+    compile 'com.konghq:unirest-java:3.2.00'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:2.26.0'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName,
+                "Implementation-Title": "skyscanner-flight-api-client",
+                "Implementation-Version": version,
+                "Automatic-Module-Name": 'com.github.romankh3.skyscannerflightapiclient.v1'
+    }
+}
+
+defaultTasks << 'clean'
+defaultTasks << 'build'
+
+/* Publishing config */
+
+task javadocJar(type: Jar) {
+    classifier = 'javadoc'
+    from javadoc
+}
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+// add all the info required by Maven Central to the pom
+configure(install.repositories.mavenInstaller) {
+    pom.project {
+        inceptionYear '2019'
+        name project.name
+        packaging 'jar'
+        description project.description
+
+        url 'https://github.com/romankh3/skyscanner-flight-api-client'
+
+        scm {
+            connection 'scm:git:https://github.com/romankh3/skyscanner-flight-api-client'
+            developerConnection 'scm:git:git@github.com:romankh3/skyscanner-flight-api-client.git'
+            url 'https://github.com/romankh3/skyscanner-flight-api-client'
+        }
+
+        licenses {
+            license {
+                name 'The Apache Software License, Version 2.0'
+                url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+            }
+        }
+
+        developers {
+            developer {
+                id 'romankh3'
+                name 'Roman Beskrovnyi'
+                email 'roman.beskrovnyy@gmail.com'
+            }
+        }
+    }
+}
+
+def getProjectProperty = { String propertyName ->
+    project.properties[propertyName]
+}
+
+bintray {
+    user = getProjectProperty "bintrayUserName"
+    key = getProjectProperty "bintrayApiKey"
+    configurations = ['archives']
+    publish = true
+    pkg {
+        repo = 'maven'
+        name = 'skyscanner-flight-api-client'
+        licenses = ['Apache-2.0']
+        labels = ['java', 'api-client ', ' skyscanner ', 'library ']
+        publicDownloadNumbers = true
+
+        //noinspection GroovyAssignabilityCheck
+        version {
+            name = project.version
+            vcsTag = project.version
+            gpg {
+                sign = true
+            }
+            mavenCentralSync {
+                sync = true
+                user = getProjectProperty 'ossrhUsername'
+                password = getProjectProperty 'ossrhPassword'
+                close = '1' // '0' to NOT close
+            }
+        }
+    }
+}
+
+bintrayUpload.dependsOn build, sourcesJar
