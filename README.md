@@ -1,7 +1,9 @@
 # skyscanner-flight-api-client
+ [![Maven Central](https://img.shields.io/maven-central/v/com.github.romankh3/skyscanner-flight-api-client.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.romankh3%22%20AND%20a:%22skyscanner-flight-api-client%22)
+ [ ![jCenter](https://api.bintray.com/packages/romankh3/maven/skyscanner-flight-api-client/images/download.svg) ](https://bintray.com/romankh3/maven/skyscanner-flight-api-client/_latestVersion)
 
 ## Description
-This is client for Skyscanner [Flight Search API](https://english.api.rakuten.net/skyscanner/api/skyscanner-flight-search/) hosted in Rapid Api
+Published on Maven Central and jCenter Client for Skyscanner [Flight Search API](https://english.api.rakuten.net/skyscanner/api/skyscanner-flight-search/) hosted in Rapid Api
 
 ## Release Notes
 
