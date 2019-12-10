@@ -10,7 +10,7 @@ plugins {
 mainClassName = "com.github.romankh3.skyscannerflightapiclient.v1.UniRestUtil"
 
 group 'com.github.romankh3'
-version '0.1.8'
+version '0.1.10'
 description 'Client for Skyscanner Flight Search API hosted in Rapid Api'
 sourceCompatibility = 1.8
 

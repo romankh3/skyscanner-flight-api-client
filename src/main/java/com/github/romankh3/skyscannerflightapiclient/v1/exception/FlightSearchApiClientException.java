@@ -1,6 +1,6 @@
 package com.github.romankh3.skyscannerflightapiclient.v1.exception;
 
-import com.github.romankh3.skyscannerflightapiclient.v1.model.validation.ValidationErrorsDto;
+import com.github.romankh3.skyscannerflightapiclient.v1.model.validation.ValidationErrorDto;
 import java.util.List;
 
 /**
@@ -11,7 +11,7 @@ import java.util.List;
  */
 public final class FlightSearchApiClientException extends RuntimeException {
 
-    private List<ValidationErrorsDto> validationErrorDtos;
+    private List<ValidationErrorDto> validationErrorDtos;
 
     /**
      * Constructs a new {@link FlightSearchApiClientException} with the specified detail message and cause.
@@ -28,12 +28,12 @@ public final class FlightSearchApiClientException extends RuntimeException {
 
     /**
      * Constructs a new {@link FlightSearchApiClientException} with specified collection of the
-     * {@link ValidationErrorsDto} objects.
+     * {@link ValidationErrorDto} objects.
      *
      * @param message the detail message (which is saved for later retrieval by the Throwable.getMessage() method).
-     * @param errors the collection of the {@link ValidationErrorsDto} which contain errors from Skyscanner API.
+     * @param errors the collection of the {@link ValidationErrorDto} which contain errors from Skyscanner API.
      */
-    public FlightSearchApiClientException(String message, List<ValidationErrorsDto> errors) {
+    public FlightSearchApiClientException(String message, List<ValidationErrorDto> errors) {
         super(message);
         this.validationErrorDtos = errors;
     }

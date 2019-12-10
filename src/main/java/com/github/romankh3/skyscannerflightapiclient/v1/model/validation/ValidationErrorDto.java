@@ -10,7 +10,7 @@ import lombok.Data;
  * @author Roman Beskrovnyi
  */
 @Data
-public class ValidationErrorsDto {
+public class ValidationErrorDto {
 
     @JsonProperty("ParameterName")
     private String parameterName;

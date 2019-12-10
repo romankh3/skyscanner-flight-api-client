@@ -5,7 +5,12 @@
 ## Description
 Published on Maven Central and jCenter Client for Skyscanner [Flight Search API](https://english.api.rakuten.net/skyscanner/api/skyscanner-flight-search/) hosted in Rapid Api
 
+**Latest version 0.1.10**
+
 ## Release Notes
+
+### 0.1.10
+*  provided build.gradle and publish process via bintray-gradle-plugin
 
 ### 0.1
 *   added Places call

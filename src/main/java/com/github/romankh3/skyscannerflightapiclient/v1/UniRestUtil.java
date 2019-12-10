@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.romankh3.skyscannerflightapiclient.v1.exception.FlightSearchApiClientException;
-import com.github.romankh3.skyscannerflightapiclient.v1.model.validation.ValidationErrorsDto;
+import com.github.romankh3.skyscannerflightapiclient.v1.model.validation.ValidationErrorDto;
 import java.util.List;
 import kong.unirest.HttpResponse;
 import kong.unirest.JsonNode;
@@ -46,7 +46,7 @@ final class UniRestUtil {
                 throw new FlightSearchApiClientException(
                         String.format("There are validation errors. statusCode = %s", response.getStatus()),
                         readValueWrapper(response.getBody().getObject().get(VALIDATIONS_KEY).toString(),
-                                new TypeReference<List<ValidationErrorsDto>>() {
+                                new TypeReference<List<ValidationErrorDto>>() {
                                 }));
             }
         } catch (UnirestException e) {
