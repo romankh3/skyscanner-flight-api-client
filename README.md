@@ -23,7 +23,6 @@ Published on Maven Central and jCenter Client for Skyscanner [Flight Search API]
 
 ## Usage
 Skyscanner has four groups of requests and all has public interfaces with implementations for using.
-*   Live Flight Search(to be added) -> LiveFlightSearchClient ^ LiveFlightSearchClientImpl
 *   Places(added) -> PlacesClient ^ PlacesClientImpl
 *   Browse Flight Prices(added one request) -> BrowseFlightPricesClient -> BrowseFlightPricesClientImpl
 *   Localisation(added) -> LocalisationClient ^ LocalisationClientImpl
