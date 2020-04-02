@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.romankh3</groupId>
     <artifactId>skyscanner-flight-api-client</artifactId>
-    <version>0.1.10</version>
+    <version>0.2.0-SNAPSHOT</version>
     <name>Skyscanner Flight API client</name>
     <description>Client for Skyscanner Flight Search API hosted in Rapid Api</description>
 
