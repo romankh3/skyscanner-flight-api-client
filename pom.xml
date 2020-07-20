@@ -34,7 +34,7 @@
     <properties>
         <jackson.core.version>2.11.1</jackson.core.version>
         <project.lombok.version>1.18.12</project.lombok.version>
-        <unirest.version>3.7.04</unirest.version>
+        <unirest.version>3.8.00</unirest.version>
         <bintray.subject>romankh3</bintray.subject>
         <bintray.repo>maven</bintray.repo>
         <bintray.package>skyscanner-flight-api-client</bintray.package>
