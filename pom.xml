@@ -32,7 +32,7 @@
     </developers>
 
     <properties>
-        <jackson.core.version>2.13.4.1</jackson.core.version>
+        <jackson.core.version>2.15.0</jackson.core.version>
         <project.lombok.version>1.18.18</project.lombok.version>
         <unirest.version>3.11.11</unirest.version>
         <bintray.subject>romankh3</bintray.subject>
